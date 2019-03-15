@@ -1,0 +1,90 @@
+    1  openssl genrsa -out private_key.pem 2048
+    2  ls
+    3  cat private_key.pem 
+    4  openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
+    5  cat public_key.pem 
+    6  echo 'what ever this is '>secret.txt
+    7  openssl rsautl -encrypt -pubin -inkey public_key.pem -in secret.txt -out secret.enc
+    8  cat secret.enc
+    9  PuTTYPuTTY
+   10  openssl rsautl -decrypt -inkey private_key.pem -in secret.enc
+   11  openssl dgst -sha256 -sign private_key.pem  -out secret.txt.sha256 secret.txt
+   12  ls
+   13  openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
+   14  history
+   15  history>openssl_learn.txt
+   16  ls
+   17  gcp
+   18  gsutil
+   19  which gcloud
+   20  ls
+   21  ls -la
+   22  cat history
+   23  history
+   24  history>history.txt
+   25  cat history.txt 
+   26  sudo apt-get update
+   27  hostnamectl
+   28  cat /etc/os-release
+   29  lsb-release -a
+   30  sudo apt-get armagetronad
+   31  sudo apt-get install armagetronad
+   32  sudo apt-get install alpine
+   33  man alpine
+   34  alpine address
+   35  armagetronad
+   36  man armagetronad
+   37  armagetronad -w
+   38  sudo armagetronad -w
+   39  man armagetronad
+   40  armagetronad -h
+   41  armagetronad --window
+   42  armagetronad.real -h 
+   43  armagetronad.real
+   44  gsutil mb gs://new_bucket
+   45  gsutil mb gs://new_bucket2
+   46  gsutil mb gs://breif_case
+   47  gsutil cp history.txt gs://breif_case/
+   48  man git
+   49  sudo apt-get install git
+   50  git status
+   51  mkdir new
+   52  ls
+   53  cd new
+   54  git intit
+   55  git init
+   56  gsutil cp history.txt gs://breif_case/
+   57  cd .
+   58  cd ..
+   59  cp history.txt ./new
+   60  ls
+   61  cd new
+   62  ls
+   63  git add.
+   64  git add .
+   65  git status
+   66  git commit -m 'first'
+   67  git config --global user.email "den200x@gmail.com"
+   68  git config user.name "den200x"
+   69  git commit -m 'first'
+   70  git push
+   71  git remote add fromGCP https://github.com/den200x/fromGCP
+   72  git push fromGCP
+   73  git push --set-upstream fromGCP master
+   74  git status
+   75  ls
+   76  ls -la
+   77  rm .git
+   78  git push
+   79  git remote add origin https://github.com/den200x/fromGCP.git
+   80  git push -u origin master
+   81  git status
+   82  cd ..
+   83  echo THIS IS GREAT
+   84  fun times
+   85  history>history2.txt
+   86  git add history2.txt
+   87  cd mew
+   88  ls
+   89  cd new
+   90  history>history2.txt
