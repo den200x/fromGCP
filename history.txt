@@ -1,0 +1,24 @@
+    1  openssl genrsa -out private_key.pem 2048
+    2  ls
+    3  cat private_key.pem 
+    4  openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
+    5  cat public_key.pem 
+    6  echo 'what ever this is '>secret.txt
+    7  openssl rsautl -encrypt -pubin -inkey public_key.pem -in secret.txt -out secret.enc
+    8  cat secret.enc
+    9  PuTTYPuTTY
+   10  openssl rsautl -decrypt -inkey private_key.pem -in secret.enc
+   11  openssl dgst -sha256 -sign private_key.pem  -out secret.txt.sha256 secret.txt
+   12  ls
+   13  openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
+   14  history
+   15  history>openssl_learn.txt
+   16  ls
+   17  gcp
+   18  gsutil
+   19  which gcloud
+   20  ls
+   21  ls -la
+   22  cat history
+   23  history
+   24  history>history.txt
